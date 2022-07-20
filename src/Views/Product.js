@@ -3,8 +3,7 @@ import axios from 'axios'
 
 
 function Product(props) {
-    // const url = 'https://pfp-public-productdb-api.azurewebsites.net/api/product/2'
-    const url = 'https://pfp-public-productdb-api.azurewebsites.net/api/picture/2'
+    const url = 'https://pfp-public-productdb-api.azurewebsites.net/api/product/5'
     const [product, setProduct] = useState(null)
 
     useEffect(() => {
@@ -18,7 +17,10 @@ function Product(props) {
         return(
             <div>
                 <div>
-                    <img src = {product}/> 
+                    <img src = {product.productPictures}/> 
+                </div>
+                <div>
+                    <h1 className='text-2xl font-bold mb-3'>{product.name}</h1>
                 </div>
             </div>  
         )
